@@ -1,0 +1,32 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  email:
+    reciepients:
+      - ortegapedro901@gmail.com
+      - pedro.ortega@tfja.edu.mx
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: $HEROKU_KEY
+  app: backendwithtravis
+  on:
+    repo: ortegapedro/platzi-store-backend
