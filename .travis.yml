@@ -26,7 +26,7 @@ deploy:
   provide: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: 08f95e65-4ab1-4ebf-a42f-d371bb9546a0
+  api_key: token_Heroku
   app: backendwithtravis
   on:
     repo: ortegapedro/platzi-store-backend
